@@ -48,3 +48,7 @@ dados$Grau_de_Instruçao <- factor(dados$Grau_de_Instruçao,
 # Codificando valores ausentes (missing values):
 
 dados[dados==-999] <- NA
+
+# Salvar como CSV
+
+write.csv(dados, "03-dataset.csv", row.names = FALSE)
