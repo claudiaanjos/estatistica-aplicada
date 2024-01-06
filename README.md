@@ -14,6 +14,7 @@ Este repositório é dedicado ao curso de Estatística Aplicada com Linguagem R 
 
 * 01 - Instalando pacotes e abrindo o banco de dados
 * 02 - Codificando variáveis categóricas
+* 03 - Teste-t para uma amostra e teste de normalidade
 
 
 #
