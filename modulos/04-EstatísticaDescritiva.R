@@ -35,20 +35,20 @@ glimpse(dados)
 
 table(dados$Genero)
 
-table(dados$Grau_de_Instruçao)
+table(dados$Grau_de_Instrucao)
 
 ## Tabela cruzada com frequências absolutas:
 
-table(dados$Genero, dados$Grau_de_Instruçao)
+table(dados$Genero, dados$Grau_de_Instrucao)
 
 
 # Frequências relativas:
 
 prop.table(table(dados$Genero))
 
-prop.table(table(dados$Grau_de_Instruçao))
+prop.table(table(dados$Grau_de_Instrucao))
 
-prop.table(table(dados$Genero, dados$Grau_de_Instruçao))
+prop.table(table(dados$Genero, dados$Grau_de_Instrucao))
 
 
 ############## Medidas para variáveis quantitativas ##############
@@ -86,7 +86,7 @@ describe(dados$Salario)
 
 describeBy(dados$Salario, group = dados$Genero)
 
-describeBy(dados$Salario, group = dados$Genero:dados$Grau_de_Instruçao)
+describeBy(dados$Salario, group = dados$Genero:dados$Grau_de_Instrucao)
 
 # Usando o group_by do pacote dplyr
 
