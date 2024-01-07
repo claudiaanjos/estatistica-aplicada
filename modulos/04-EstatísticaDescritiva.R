@@ -11,7 +11,7 @@ library(psych)
 
 ############### Carregando o banco de dados ###############
 
-# Passo 1: selecionar o diretório de trabalho (working directory)
+# Passo 1: selecionar o diretÃ³rio de trabalho (working directory)
 ## Session > Set Working Directory > Choose Directory
 
 
@@ -20,7 +20,7 @@ library(psych)
 dados <- read.csv('Banco de Dados 2.csv', sep = ';', dec = ',',
                   stringsAsFactors = T, fileEncoding = "latin1")
 
-dados <- read.csv2('Banco de Dados 2.csv', stringsAsFactors = T,
+dados <- read.csv2('03-dataset.csv', stringsAsFactors = T,
                    fileEncoding = "latin1")
 
 ############### Visualizando o banco de dados ###############
@@ -29,69 +29,69 @@ View(dados)
 glimpse(dados)
 
 
-###### Tabelas de frequências de variáveis categóricas ######
+###### Tabelas de frequÃªncias de variÃ¡veis categÃ³ricas ######
 
-# Frequências absolutas:
+# FrequÃªncias absolutas:
 
 table(dados$Genero)
 
-table(dados$Grau_de_Instruçao)
+table(dados$Grau_de_InstruÃ§ao)
 
-## Tabela cruzada com frequências absolutas:
+## Tabela cruzada com frequÃªncias absolutas:
 
-table(dados$Genero, dados$Grau_de_Instruçao)
+table(dados$Genero, dados$Grau_de_InstruÃ§ao)
 
 
-# Frequências relativas:
+# FrequÃªncias relativas:
 
 prop.table(table(dados$Genero))
 
-prop.table(table(dados$Grau_de_Instruçao))
+prop.table(table(dados$Grau_de_InstruÃ§ao))
 
-prop.table(table(dados$Genero, dados$Grau_de_Instruçao))
+prop.table(table(dados$Genero, dados$Grau_de_InstruÃ§ao))
 
 
-############## Medidas para variáveis quantitativas ##############
+############## Medidas para variÃ¡veis quantitativas ##############
 
-# Tabela de frequências:
+# Tabela de frequÃªncias:
 
-## Variáveis discretas:
+## VariÃ¡veis discretas:
 table(dados$N_Filhos)
 prop.table(table(dados$N_Filhos))
 
-## Variáveis contínuas:
+## VariÃ¡veis contÃ­nuas:
 
-# Necessário criar categorias que correspondam a faixas de valores:
+# NecessÃ¡rio criar categorias que correspondam a faixas de valores:
 
 ## Passo 1: analisar a amplitude
 range(dados$Salario)
 
-## Passo 2 (opcional): avaliar a quantidade de categorias adequada (método Sturges)
+## Passo 2 (opcional): avaliar a quantidade de categorias adequada (mÃ©todo Sturges)
 nclass.Sturges(dados$Salario)
 
-## Passo 3: criação da tabela com as faixas
+## Passo 3: criaÃ§Ã£o da tabela com as faixas
 table(cut(dados$Salario, seq(0, 6, l = 7)))
 
 
-# Função summary - fornece média, mediana, quartis e valores mín e máx
+# FunÃ§Ã£o summary - fornece mÃ©dia, mediana, quartis e valores mÃ­n e mÃ¡x
 
 summary(dados$N_Filhos)
 
 summary(dados$Salario)
 
 
-# Funções describe e describe.by (pacote 'psych') - média, desvio, erro, mediana
+# FunÃ§Ãµes describe e describe.by (pacote 'psych') - mÃ©dia, desvio, erro, mediana
 
 describe(dados$Salario)
 
 describeBy(dados$Salario, group = dados$Genero)
 
-describeBy(dados$Salario, group = dados$Genero:dados$Grau_de_Instruçao)
+describeBy(dados$Salario, group = dados$Genero:dados$Grau_de_InstruÃ§ao)
 
 # Usando o group_by do pacote dplyr
 
-tabela <- dados %>% group_by(Genero, Grau_de_Instruçao) %>% 
-  summarise(média = mean(Salario),
+tabela <- dados %>% group_by(Genero, Grau_de_InstruÃ§ao) %>% 
+  summarise(mÃ©dia = mean(Salario),
             DP = sd(Salario),
             mediana = median(Salario))
 tabela
