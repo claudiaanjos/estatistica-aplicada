@@ -1,4 +1,4 @@
-ID_Paciente;ID_Médico;Gênero;Data_Nasc;Convulsões_PT;Convulsões_S1;Convulsões_S6
+ID_Paciente;ID_Medico;Genero;Data_Nasc;Convulsoes_PT;Convulsoes_S1;Convulsoes_S6
 382;HQQS;Masculino;11/25/1967;3;3;3
 06YO;IKGU;Masculino;08/16/1967;4;5;4
 07GL;VLDP;Masculino;01/22/1972;3;1;2
