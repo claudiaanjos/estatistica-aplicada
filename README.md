@@ -1,7 +1,7 @@
 # Estatística Aplicada
 
 <p align="center">
-<img src="https://img.shields.io/static/v1?label=Status&message=EM_ANDAMENTO&color=blue&style=for-the-badge"/>
+<img src="https://img.shields.io/static/v1?label=Status&message=PAUSADO&color=blue&style=for-the-badge"/>
 </p>
 
 
@@ -33,7 +33,7 @@ Este repositório é dedicado ao curso de Estatística Aplicada com Linguagem R 
 * 19 - ANOVA mista
 * 20 - MANVOVA (ANOVA multivariada) parte 1
 * 21 - MANVOVA (ANOVA multivariada) parte 2
-* 22 - R Markdown: Gerando relatórios parte 3
+* **22 - R Markdown: Gerando relatórios parte 3**
 * 23 - R Markdown: Gerando relatórios parte 4
 * 24 - Qui-quadrado de independência
 * 25 - Qui-quadrado de aderência
