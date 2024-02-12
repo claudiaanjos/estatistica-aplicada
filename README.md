@@ -74,6 +74,7 @@ Este repositório é dedicado ao curso de Estatística Aplicada com Linguagem R 
 * 60 - Criando um gráfico com medidas repetidas (ggplot2)
 * 61 - Como organizar seu banco de dados para análises estatísticas
 * 62 - Análise descritiva de itens em escala Likert
+* 63 - Curva ROC
 
 
 #
